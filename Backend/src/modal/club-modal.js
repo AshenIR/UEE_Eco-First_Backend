@@ -9,6 +9,12 @@ const clubSchema = new mongoose.Schema ({
     memberCount:{
         type: String
     },
+    avatar:{
+        type: String
+    },
+    cloudinary_id: {
+        type: String
+    },
     description:{
         type: String
     }

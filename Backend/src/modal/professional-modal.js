@@ -9,6 +9,12 @@ const professionalSchema = new mongoose.Schema ({
     experience:{
         type: String
     },
+    avatar:{
+        type: String
+    },
+    cloudinary_id: {
+        type: String
+    },
     description:{
         type: String
     }

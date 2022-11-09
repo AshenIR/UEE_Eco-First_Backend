@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const meetingSchedulingSchema = new mongoose.Schema ({
     meetingName: {
-        type: String,
+        type: String
     },
     meetingLink: {
         type: String
