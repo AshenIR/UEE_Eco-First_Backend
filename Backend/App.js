@@ -6,6 +6,7 @@ const ProjectAPI = require("./src/routes/project-route")
 const ProfessionalAPI = require("./src/routes/professional-route")
 const ClubAPI = require("./src/routes/club-route")
 const DiscussionAPI = require("./src/routes/discussion-route")
+const RequestMeetingAPI = require("./src/routes/request-route")
 
 const bodyParser = require("body-parser");
 const connectDB = require("./src/config/config");
@@ -19,13 +20,14 @@ app.use(bodyParser.json())
 
 connectDB();
 
-app.use("/meetings",MeetingSchedulingAPI)
-app.use("/events",EventSchedulingAPI)
-app.use("/projects",ProjectAPI)
-app.use("/professionals",ProfessionalAPI)
-app.use("/clubs",ClubAPI)
-app.use("/discussions",DiscussionAPI)
+app.use("/meetings", MeetingSchedulingAPI)
+app.use("/events", EventSchedulingAPI)
+app.use("/projects", ProjectAPI)
+app.use("/professionals", ProfessionalAPI)
+app.use("/clubs", ClubAPI)
+app.use("/discussions", DiscussionAPI)
+app.use("/requests", RequestMeetingAPI)
 
 app.listen(PORT, () => {
-    console.log(`App listening at http://localhost:${PORT}`);
-  });
+  console.log(`App listening at http://localhost:${PORT}`);
+});
